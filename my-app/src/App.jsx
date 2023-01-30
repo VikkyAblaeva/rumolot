@@ -46,7 +46,7 @@ const solutions = [
   },
 ]
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
+  { name: 'Watch Demo', href: '#', icon: PlayIcon }, // иконки play и telephone
   { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
 const resources = [
@@ -72,11 +72,6 @@ const resources = [
     description: 'Мы решили запустить первую серию монет и магнитов с изображениями достопримечательностей городов Москвы и Санкт-Петербурга.',
     href: '#',
     icon: ShieldCheckIcon },
-]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
 ]
 
 function classNames(...classes) {
@@ -150,19 +145,7 @@ function App() {
                             </a>
                           ))}
                         </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                          {callsToAction.map((item) => (
-                            <div key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-2xl font-medium text-gray-900 hover:bg-gray-100"
-                              >
-                                <item.icon className="h-6 w-6 flex-shrink-0 text-gray-900" aria-hidden="true" />
-                                <span className="ml-3">{item.name}</span>
-                              </a>
-                            </div>
-                          ))}
-                        </div>
+                        
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -221,26 +204,6 @@ function App() {
                               </div>
                             </a>
                           ))}
-                        </div>
-                        <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
-                          <div>
-                            <h3 className="text-2xl font-medium text-gray-900">Recent Posts</h3>
-                            <ul role="list" className="mt-4 space-y-4">
-                              {recentPosts.map((post) => (
-                                <li key={post.id} className="truncate text-2xl">
-                                  <a href={post.href} className="font-medium text-gray-1200 hover:text-gray-900">
-                                    {post.name}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div className="mt-5 text-2xl">
-                            <a href="https://rumolot.ru/oborudovanie-dlya-chekanki-monet/" className="font-medium text-indigo-1200 hover:text-indigo-900">
-                              View all posts
-                              <span aria-hidden="true"> &rarr;</span>
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </Popover.Panel>
